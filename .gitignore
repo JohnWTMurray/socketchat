@@ -1,0 +1,11 @@
+# disbot
+Disbot/node_modules/
+
+# chat server
+ChatServer/bin/
+ChatServer/obj/
+
+# chat client
+ChatClient/node_modules/
+ChatClient/dist/
+
