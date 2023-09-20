@@ -1,10 +1,28 @@
 import { Client } from "discord.js";
+import * as dontenv from 'dotenv';
+
+dontenv.config();
 
 
 const client: Client<boolean> = new Client({
-    intents: []
+  intents: [
+    "DirectMessages", "Guilds", "MessageContent",
+    "GuildVoiceStates", "GuildModeration", "GuildMessages",
+    "GuildMembers", "GuildBans"
+  ]
 })
-console.log(client);
 
-const msg: string = "Discord Bot";
-console.log(msg);
+
+client.on('messageCreate', (msg) => {
+  msg.reply("hi");
+})
+
+client.on('ready', () => {
+  client.guilds.client.users.cache.each(user => console.log(user.displayName));
+});
+
+
+
+client.login(process.env.TOKEN);
+
+

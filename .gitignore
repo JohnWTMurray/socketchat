@@ -1,5 +1,6 @@
 # disbot
 Disbot/node_modules/
+Disbot/.env
 
 # chat server
 ChatServer/bin/
@@ -8,4 +9,5 @@ ChatServer/obj/
 # chat client
 ChatClient/node_modules/
 ChatClient/dist/
+
 
